@@ -5,6 +5,16 @@ class ContactMailer < ApplicationMailer
   #
   #   en.contact_mailer.message.subject
   #
+
+  def creation_confirmation(contact)
+    @contact = contact
+
+    mail(
+      to:       @contact.email,
+      subject:  "New message from #{@contact.name} created!"
+    )
+  end
+
   def message
     @greeting = "Hi"
 

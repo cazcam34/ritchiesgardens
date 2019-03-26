@@ -3,11 +3,8 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
     if @contact.save
-      raise
-      flash.now[:error] = nil
-      flash.now[:notice] = 'Thank you for your message!'
+      ContactMailer.creation_confirmation(@contact).deliver_now
     else
-      flash.now[:error] = 'Cannot send message.'
       render :new
     end
   end
