@@ -1,3 +1,10 @@
 class Contact < ApplicationRecord
-  attr_accessor :name, :email
+  attr_accessor :name, :email, :phonenumber, :message
+  validates :email,
+    :presence => :true,
+    :format => {
+      :with => /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i,
+      :message => "must be a valid email address"
+    }
+  validates :message, :presence => :true
 end

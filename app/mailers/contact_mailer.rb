@@ -10,14 +10,8 @@ class ContactMailer < ApplicationMailer
     @contact = contact
 
     mail(
-      to:       @contact.email,
-      subject:  "New message from #{@contact.name} created!"
+      to:       "carolinecameron_34@hotmail.com",
+      subject:  "New enquiry from website: #{@contact.name}."
     )
-  end
-
-  def message
-    @greeting = "Hi"
-
-    mail to: "to@example.org"
   end
 end

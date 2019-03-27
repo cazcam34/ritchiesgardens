@@ -1,0 +1,15 @@
+.col-form-label {
+  text-align: right;
+  font-size: 12px;
+  padding-right: 0px;
+}
+
+.form-group-total {
+  padding-top: 10px;
+}
+
+.form-error {
+  display: flex;
+  justify-content: center;
+  color: $red;
+}
