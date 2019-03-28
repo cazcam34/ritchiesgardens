@@ -1,7 +1,88 @@
+// universal css
+
 .footer {
+  padding-top: 60px;
+  width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 40px;
-  padding-bottom: 20px;
+  align-items: baseline;
 }
+
+.footer-phone {
+  a {
+    color: $light-gray;
+  }
+  a:hover {
+    text-decoration: none;
+    color: $light-gray;
+  }
+}
+
+i {
+  color: $green;
+}
+
+.footer-copyright {
+  font-size: 10px;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+
+
+
+// Desktop
+@media screen and (min-width: 992px) {
+  .footer {
+    justify-content: space-between;
+  }
+  .footer-phone {
+    a {
+      font-size: 17px;
+    }
+    i {
+      font-size: 20px;
+      padding-right: 6px;
+    }
+  }
+  .socials {
+    padding-left: 30px;
+    i {
+      font-size: 25px;
+      padding-right: 10px;
+    }
+  }
+  .footer-copyright {
+    text-align: right;
+  }
+}
+
+// Mobile
+@media screen and (max-width: 992px) {
+  .footer {
+    justify-content: space-around;
+  }
+  img {
+    height: 60px;
+  }
+  .footer-phone {
+    a {
+      font-size: 12px;
+    }
+    i {
+      font-size: 15px;
+    }
+  }
+  .socials {
+    i {
+      font-size: 17px;
+    }
+    .fa-instagram {
+      padding-left: 10px;
+    }
+  }
+  .footer-copyright {
+    font-size: 8px;
+  }
+}
+
+

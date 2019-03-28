@@ -1,7 +1,25 @@
 <div class="container">
   <div class="footer">
-    <%= image_tag "logo-stacked.png", height: 80 %>
-    <p>YO THIS IS A FOOTER</p>
-    <p>Copyright Caroline's Web</p>
+    <div class="footer-logo">
+      <%= image_tag "logo-stacked.png", height: 80 %>
+    </div>
+    <div class="footer-phone">
+      <i class="fas fa-phone-volume"></i>
+      <%= link_to "tel: +613 423 418 087", target: :_blank do %>
+        <span>0423 418 087</span>
+      <% end %>
+    </div>
+    <div class="socials">
+      <%= link_to "http://facebook.com/ritchiesgardens", target: :_blank do %>
+        <i class="fab fa-facebook-square"></i>
+      <% end %>
+      <%= link_to "http://instagram.com/ritchiesgardens", target: :_blank do %>
+        <i class="fab fa-instagram"></i>
+      <% end %>
+    </div>
   </div>
+      <div class="footer-copyright">
+      <i class="far fa-copyright"></i>
+      <span>Copyright Caroline's Web</span>
+    </div>
 </div>
