@@ -7,6 +7,24 @@
 </div>
 <div class="content">
   <div class="container">
-    <p>oooh nice pics!</p>
+    <div class="row">
+      <div class="col-sm-12 col-md-5">
+        <h1>Contact Ritchie's Gardens</h1>
+        <h3>We'd love to hear from you!</h3>
+        <p>Fill out the enquiry form or give us a call and we'll get back to you as soon as we can.</p>
+        <div class="contact-phone-padding">
+          <span>Phone: </span><%= link_to "tel: +613 423 418 087", target: :_blank do %>
+            <span>0423 418 087</span>
+          <% end %>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-7">
+        <div class="form-header">
+          <h3>Enquire below for a free quote</h3>
+        </div>
+        <%= render 'contacts/form' %>
+      </div>
+    </div>
   </div>
 </div>
+

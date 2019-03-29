@@ -6,9 +6,22 @@
   </div>
 </div>
 <div class="content">
-  <div class="container">
-    <p>oooh nice pics!</p>
+  <div class="container gallery-container">
+    <div class="tz-gallery">
+      <div class="row">
+        <a class="lightbox" href="images/park.jpg">
+          <% gallery = Cloudinary::Api.resources(:type => :upload, :prefix => "RG") %>
+          <% gallery["resources"].each do |image| %>
+            <%= link_to "#{image["secure_url"]}", class: "lightbox" do %>
+              <div class="col-sm-6 col-md-4"><%= cl_image_tag("#{image["secure_url"]}", width: 300, height: 300, crop: :fill, :class =>'card') %></div>
+            <% end %>
+          <% end %>
+        </a>
+      </div>
+    </div>
   </div>
 </div>
-
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+<script>
+    baguetteBox.run('.tz-gallery');
+</script>

@@ -35,8 +35,11 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
-## security for cloudinary
+## added security
 gem 'dotenv-rails', groups: [:development, :test]
+
+## added for image hosting
+gem 'cloudinary', '~> 1.9.1'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

@@ -5,10 +5,18 @@ class ContactsController < ApplicationController
     if @contact.save
       ContactMailer.creation_confirmation(@contact).deliver_now
       flash.now[:notice] = "Your enquiry has been sent. We'll be in touch #{@contact.name}!"
-      redirect_to root_path
+      if URI(request.referer).path == "/contact"
+        render "pages/contact"
+      else
+        render "pages/home"
+      end
     else
       flash.now[:alert] = "#{@contact.errors.count} errors. Please re-enter enquiry below."
-      render "pages/home"
+      if URI(request.referer).path == "/contact"
+        render "pages/contact"
+      else
+        render "pages/home"
+      end
     end
   end
 
