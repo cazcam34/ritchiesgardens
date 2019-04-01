@@ -77,34 +77,24 @@ Rails.application.configure do
 
   # email with gmail
   # config/environments/production.rb
-  # config.action_mailer.delivery_method = :smtp
+  config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_url_options = { host: "ritchiesgardens.herokuapp.com" }
     # or your custom domain name eg. "www.yourdomain.com"
-#   config.action_mailer.smtp_settings = {
-#   address: "smtp.gmail.com",
-#   port: 465,
-#   domain: 'gmail.com',
-#   user_name: ENV['GMAIL_ADDRESS'],
-#   password: ENV['GMAIL_APP_PASSWORD'],
-#   authentication: :plain,
-#   enable_starttls_auto: true
-# }
+  config.action_mailer.smtp_settings = {
+  address: "smtp.gmail.com",
+  port: 465,
+  domain: 'gmail.com',
+  user_name: ENV['GMAIL_ADDRESS'],
+  password: ENV['GMAIL_APP_PASSWORD'],
+  authentication: :plain,
+  openssl_verify_mode: 'none'
+}
 
 #Added per active admin install instructions
 
 
 #These settings are for the sending out email for active admin and consequently the   devise mailer
-ActionMailer::Base.delivery_method = :smtp
-ActionMailer::Base.smtp_settings =
-{
 
-  :address            => 'smtp.gmail.com',
-  :port               => 587,
-  :domain             => 'gmail.com', #you can also use google.com
-  :authentication     => :plain,
-  :user_name          => ENV['GMAIL_ADDRESS'],
-  :password           => ENV['GMAIL_APP_PASSWORD']
-}
 
   # Send deprecation notices to registered listeners.
   config.active_support.deprecation = :notify
