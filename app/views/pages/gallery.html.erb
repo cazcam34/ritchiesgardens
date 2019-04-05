@@ -13,7 +13,7 @@
           <% gallery = Cloudinary::Api.resources(:type => :upload, :prefix => "RG") %>
           <% gallery["resources"].each do |image| %>
             <%= link_to "#{image["secure_url"]}", class: "lightbox" do %>
-              <div class="col-sm-6 col-md-4"><%= cl_image_tag("#{image["secure_url"]}", width: 300, height: 300, crop: :fill, :class =>'card') %></div>
+              <div class="col-sm-6 col-md-4"><%= cl_image_tag("#{image["secure_url"]}", width: 300, height: 300, crop: :fill, :class =>'card', alt: "Ritchie's Gardens Gallery") %></div>
             <% end %>
           <% end %>
         </a>

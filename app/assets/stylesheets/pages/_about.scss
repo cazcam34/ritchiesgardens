@@ -4,6 +4,22 @@
   justify-content: space-evenly;
 }
 
-.about-image {
-  float: right;
+
+// Desktop
+@media screen and (min-width: 992px) {
+  .about-image {
+    float: right;
+  }
 }
+
+// Mobile
+@media screen and (max-width: 992px) {
+  .about-text {
+    text-align: center;
+  }
+  .about-image {
+    text-align: center;
+  }
+}
+
+

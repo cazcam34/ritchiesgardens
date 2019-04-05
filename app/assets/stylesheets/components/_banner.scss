@@ -11,9 +11,25 @@
   height: 100vh;
 }
 
-.typed {
+// .typed {
+//   font-size: 50px;
+//   font-family: "Dosis", sans-serif;
+// }
+
+// Desktop
+@media screen and (min-width: 992px) {
+  .typed {
   font-size: 50px;
   font-family: "Dosis", sans-serif;
+  }
+}
+
+// Mobile
+@media screen and (max-width: 992px) {
+  .typed {
+  font-size: 28px;
+  font-family: "Dosis", sans-serif;
+  }
 }
 
 .banner h1 {
