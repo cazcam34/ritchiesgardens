@@ -3,7 +3,6 @@ const initUpdateNavbarOnScroll = () => {
   const banner = document.querySelector('.banner');
   if (navbar) {
     window.addEventListener('scroll', () => {
-      console.log(window.innerHeight)
       if (window.scrollY >= banner.offsetHeight) {
         navbar.classList.add('navbar-wagon-black');
       } else {
