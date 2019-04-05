@@ -4,15 +4,33 @@
   justify-content: space-between;
 }
 
-.contact-phone-padding {
-  padding-top: 8px;
-  font-size: 19px;
+.contact-details {
+  text-decoration: none;
   a {
     color: $light-gray;
     text-decoration: none;
+  }
+  p {
+    font-size: 15px;
+  }
+  h3 {
+    padding-bottom: 10px;
   }
 }
 
 .contact-button-mob {
   text-align: center;
 }
+
+// Desktop
+@media screen and (min-width: 992px) {
+
+}
+
+// Mobile
+@media screen and (max-width: 991px) {
+  .contact-details {
+    text-align: center;
+  }
+}
+
