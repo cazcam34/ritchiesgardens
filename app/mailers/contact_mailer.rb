@@ -10,7 +10,7 @@ class ContactMailer < ApplicationMailer
     @contact = contact
 
     mail(
-      to:       "carolinecameron_34@hotmail.com",
+      to:       "ritchiesgardens@gmail.com",
       subject:  "New enquiry from website: #{@contact.name}."
     )
   end
