@@ -4,6 +4,12 @@
   justify-content: space-evenly;
 }
 
+.about-text {
+  a {
+    color: $light-gray;
+    text-decoration: underline;
+  }
+}
 
 // Desktop
 @media screen and (min-width: 992px) {
