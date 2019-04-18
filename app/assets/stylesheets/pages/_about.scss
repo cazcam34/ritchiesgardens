@@ -11,6 +11,10 @@
   }
 }
 
+.about-image {
+  padding-top: 20px;
+}
+
 // Desktop
 @media screen and (min-width: 992px) {
   .about-image {
@@ -25,6 +29,13 @@
   }
   .about-image {
     text-align: center;
+    padding-top: 45px;
+    img {
+      height: 200px;
+    }
+  }
+  ul {
+    text-align: left;
   }
 }
 

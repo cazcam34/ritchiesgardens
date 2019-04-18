@@ -23,11 +23,18 @@ i {
 
 .footer-copyright {
   font-size: 10px;
-  text-align: center;
   padding-bottom: 15px;
 }
 
+.footer-abn {
+  font-size: 10px;
+  padding-bottom: 15px;
+}
 
+.footer-small-print {
+  display: flex;
+  padding-top: 23px;
+}
 
 
 // Desktop
@@ -51,8 +58,8 @@ i {
       padding-right: 10px;
     }
   }
-  .footer-copyright {
-    text-align: right;
+  .footer-small-print {
+  justify-content: space-between;
   }
 }
 
@@ -82,6 +89,17 @@ i {
   }
   .footer-copyright {
     font-size: 8px;
+  }
+
+  .footer-abn {
+    font-size: 8px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+  }
+
+  .footer-small-print {
+    flex-direction: column;
+    align-items: center;
   }
 }
 
